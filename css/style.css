@@ -1,5 +1,7 @@
 html {
     background: radial-gradient(farthest-corner at right top,#21A09D, #06182D);
+    background-attachment: fixed;
+    width: auto;
     height: 100%;
     font-family: 'Roboto', cursive;
 }
@@ -7,7 +9,7 @@ html {
 .conteudo {
     padding: 10vh 3em 0;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 2em;
 }
 
@@ -46,7 +48,7 @@ html {
     display: block;
     content: '';
     position: absolute;
-  }
+}
   
 .mochila:before {
     height: 75px;
@@ -130,3 +132,18 @@ html {
     font-weight: 400;
 }
 
+@media screen and (max-width: 1024px) {
+
+    .conteudo {
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (max-width: 728px) {
+    .principal {
+        min-width: 300px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
